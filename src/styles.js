@@ -19,7 +19,8 @@ export const defaultClasses = {
   monthAndYearDivider        : 'rdr-MonthAndYear-divider',
   year                       : 'rdr-MonthAndYear-year',
   daySunday                  : 'rdr-Sunday',
-  daySpecialDay               : 'rdr-SpecialDay',
+  daySpecialDay              : 'rdr-SpecialDay',
+  isCurrentMonthDay          : 'rdr-isCurrentMonthDay',
 };
 
 const defaultTheme = {

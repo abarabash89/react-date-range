@@ -198,9 +198,9 @@ class Calendar extends Component {
       // set days before today to isPassive
       var _today = moment()
       if (disableDaysBeforeToday && Number(dayMoment.diff(_today,"days")) <= -1) {
-        days.push({ dayMoment ,isPassive:true});
+        days.push({ dayMoment ,isPassive:true ,isCurrentMonthDay:true });
       } else {
-        days.push({ dayMoment });
+        days.push({ dayMoment ,isCurrentMonthDay:true });
       }
     }
 
@@ -213,7 +213,7 @@ class Calendar extends Component {
 
     const today = moment().startOf('day');
     return days.map((data, index) => {
-      const { dayMoment, isPassive } = data;
+      const { dayMoment, isPassive, isCurrentMonthDay } = data;
       const isSelected    = !range && (dayMoment.unix() === dateUnix);
       const isInRange     = range && checkRange(dayMoment, range);
       const isStartEdge   = range && checkStartEdge(dayMoment, range);
@@ -234,6 +234,7 @@ class Calendar extends Component {
           isStartEdge = { isStartEdge }
           isEndEdge = { isEndEdge }
           isSelected={ isSelected || isEdge }
+          isCurrentMonthDay={isCurrentMonthDay}
           isInRange={ isInRange }
           isSunday={ isSunday }
           isSpecialDay={ isSpecialDay }
