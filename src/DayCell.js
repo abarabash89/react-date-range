@@ -82,7 +82,7 @@ class DayCell extends Component {
   }
 
   getClassNames(classes) {
-    const { isSelected, isInRange, isPassive, isStartEdge, isEndEdge, isToday, isSunday, isSpecialDay, isCurrentMonthDay } = this.props;
+    const { isSelected, isInRange, isPassive, isOutsideMinMax, isStartEdge, isEndEdge, isToday, isSunday, isSpecialDay, isCurrentMonthDay } = this.props;
 
     return classnames({
       [classes.day]       : true,
