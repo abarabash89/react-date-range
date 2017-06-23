@@ -21,6 +21,7 @@ export const defaultClasses = {
   daySunday                  : 'rdr-Sunday',
   daySpecialDay              : 'rdr-SpecialDay',
   isCurrentMonthDay          : 'rdr-isCurrentMonthDay',
+  isOutsideMinMax            : 'rdr-isOutsideMinMax',
 };
 
 const defaultTheme = {

@@ -95,6 +95,7 @@ class DayCell extends Component {
       [classes.daySunday]: isSunday,
       [classes.daySpecialDay]: isSpecialDay,
       [classes.isCurrentMonthDay]: isCurrentMonthDay,
+      [classes.isOutsideMinMax]: isOutsideMinMax,
     });
 
   }
@@ -140,6 +141,7 @@ DayCell.propTypes = {
   isSelected  : PropTypes.bool,
   isCurrentMonthDay: PropTypes.bool,
   isInRange   : PropTypes.bool,
+  isOutsideMinMax   : PropTypes.bool,
   isPassive   : PropTypes.bool,
   theme       : PropTypes.shape({
     Day       : PropTypes.object.isRequired
